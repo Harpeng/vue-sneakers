@@ -5,7 +5,7 @@ defineProps({
   title: String,
   price: Number,
   isFavorite: Boolean,
-  isAdd: Boolean,
+  isAdded: Boolean,
   onClickFavorite: Function,
   onClickAdd: Function
 })
@@ -24,7 +24,7 @@ defineProps({
         <span class="text-slate-400">Цена:</span>
         <b>{{price}}</b>
       </div>
-      <img @click="onClickAdd" :src="!isAdd ? '/plus.svg' : '/checked.svg'" alt="plus" />
+      <img @click="onClickAdd" :src="!isAdded ? '/plus.svg' : '/checked.svg'" alt="plus" />
     </div>
   </div>
 </template>
