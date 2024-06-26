@@ -1,5 +1,5 @@
 <template>
-  <div class="flex gap-4 items-center border border-slate-100 p-4 rounded-xl mt-6">
+  <div class="flex gap-4 items-center border border-slate-100 p-2 rounded-xl mb-2">
     <img class="w-16 h-16" :src="imageUrl" :alt="title">
     <div class="flex flex-col flex-1">
         <p>{{title}}</p>
