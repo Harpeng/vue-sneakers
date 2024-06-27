@@ -1,5 +1,5 @@
 <script setup>
-import { reactive, watch, ref, onMounted } from 'vue'
+import { reactive, watch, ref, onMounted, provide } from 'vue'
 import axios from 'axios'
 import debounce from 'lodash.debounce'
 import { inject } from 'vue'
@@ -48,6 +48,16 @@ const addToFavorite = async (item) => {
       await axios.delete(`https://3afc0b251db73ab9.mokky.dev/favorites/${item.favoriteId}`)
       item.favoriteId = null
     }
+  } catch (err) {
+    console.log(err)
+  }
+}
+
+const removeToFavorite = async (item) => {
+  try {
+    item.isFavorite = false
+    await axios.delete(`https://3afc0b251db73ab9.mokky.dev/favorites/${item.favoriteId}`)
+    item.favoriteId = null
   } catch (err) {
     console.log(err)
   }
@@ -121,6 +131,10 @@ watch(cart, () => {
 })
 
 watch(filters, fetchItems)
+
+provide('favorites', {
+    removeToFavorite
+})
 </script>
 
 <template>
