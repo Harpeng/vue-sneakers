@@ -1,6 +1,6 @@
 <template>
   <header class="flex justify-between border-b border-slate-200 px-10 py-8">
-    <router-link to='/'>
+    <router-link to='/vue-sneakers/'>
       <div class="flex items-center gap-4">
         <img src="/logo.png" alt="logo" class="w-10" />
         <div>
@@ -17,7 +17,7 @@
         <img src="/cart.svg" alt="cart" />
         <span>{{ totalPrice }} руб</span>
       </li>
-      <router-link to="/favorites">
+      <router-link to="/vue-sneakers/favorites">
         <li class="flex items-center gap-3 text-slate-500 hover:text-black cursor-pointer">
         <img src="/heart.svg" alt="bookmark" />
         <span>Избранное</span>
