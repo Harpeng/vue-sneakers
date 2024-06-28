@@ -11,12 +11,12 @@ const app = createApp(App)
 
 const routes = [
     {
-        path: '/',
+        path: '/vue-sneakers/',
         component: Home,
         name: 'Home'
     },
     {
-        path: '/favorites',
+        path: '/vue-sneakers/favorites',
         component: About,
         name: 'Favorites'
     },

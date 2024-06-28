@@ -31,7 +31,7 @@ const fetchFavorites = async () => {
     const { data } = await axios.get('https://3afc0b251db73ab9.mokky.dev/favorites')
     favorites.value = data.map((obj) => {
       const item = obj.item
-      item.favoriteId = obj.id // Присваиваем favoriteId для каждого элемента
+      item.favoriteId = obj.id 
       return item
     })
     console.log(favorites.value) // Для проверки корректности данных

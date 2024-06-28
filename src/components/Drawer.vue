@@ -11,13 +11,13 @@
           v-if="!totalPrice && !orderId"
           title="Корзина пустая"
           description="Добавьте хотя бы одну пару кроссовок, чтобы сделать заказ"
-          imageUrl="/package-icon.png"
+          imageUrl="./package-icon.png"
         />
         <InfoBlock
           v-if="orderId"
           title="Заказ оформлен"
           :description="`Ваш заказ #${orderId} скоро будет передан курьерской службе`"
-          imageUrl="/order-success-icon.png"
+          imageUrl="./order-success-icon.png"
         />
       </div>
       <div v-else>
